@@ -1,0 +1,494 @@
+@import url('./fonts.css');
+@import url('./normalize.css');
+@import url('./all.min.css');
+
+html {
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.article {
+    margin: 10px;
+    font-family: 'Open Sans';
+}
+
+.article a {
+    text-decoration: none;
+    color: #0074D9;
+}
+
+.header {
+    font-size: 14px;
+}
+
+.header_topic {
+    margin-bottom: 8px;
+}
+
+.topic {
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.topic a {
+    color: #e12248;
+    padding-right: 3px;
+}
+
+.topic a:hover {
+    text-decoration: underline;
+}
+
+.topic a:hover::after {
+    content: 'NOTICIA. Contenido con base en hechos observados o verificados por el reportero, o con base en fuentes conocedoras de la temática.';
+    width: 440px;
+    background-color: #f8f8f8;
+    color: #000;
+    text-transform: none;
+    font-weight: 300;
+    border-radius: 3px;
+    border: silver solid 0.5px;
+    padding: 20px;
+    line-height: 20px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: -50px;
+}
+
+.topic_title {
+    padding-left: 3px;
+    color: #777;
+}
+
+.header_title {
+    font-family: 'Merriweather', serif;
+    font-size: 41.6px;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted #DDD;
+}
+
+.header_info {
+    padding: 10px 0;
+    border-bottom: 1px dotted #DDD;
+}
+
+.info_author {
+    margin-bottom: 4px;
+}
+
+.info_author a:hover {
+    text-decoration: underline;
+}
+
+.info_date {
+    color: #777;
+}
+
+.header_logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.logo_discription {
+    color: #777;
+    margin-right: 5px;
+}
+
+.logo_picture {
+    position: relative;
+}
+
+.logo_picture img {
+    height: 41px;
+}
+
+.logo_picture img:hover {
+    animation: picture 1.0s linear;
+}
+
+@keyframes picture {
+    0% {
+        opacity: 1;
+    }
+
+    5% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.header_tags {
+    background: #F8F8F8;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.header_tags span {
+    color: #777;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.header_tags a {
+    font-size: 0.9rem;
+}
+
+.header_tags a:hover {
+    color: #E12248;
+}
+
+.header_tags a:last-child:after {
+    content: "";
+}
+
+.header_tags a:after {
+    content: "\00a0 /\00a0 ";
+    color: #777;
+    font-weight: normal;
+}
+
+.header_picture {
+    cursor: pointer;
+    border-bottom: 1px dotted #DDD;
+}
+
+.header_picture img {
+    width: 100%;
+}
+
+.header_picture:hover {
+    animation: picture 1.0s linear;
+    text-decoration: underline;
+    text-decoration-color: #E12248;
+}
+
+.header_picture figcaption {
+    animation: none !important;
+    font-size: 11px;
+    color: #777;
+    padding: 5px 0px;
+}
+
+.content-wrapper {
+    margin-top: 10px;
+}
+
+.content-share {
+    width: 13%;
+    margin-top: 20px;
+    margin-right: 3%;
+    display: inline-block;
+    top: 70px;
+    position: sticky;
+    vertical-align: top;
+    background: white;
+}
+
+.content-share_wrapper {
+    border-top: 4px solid #E12248;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.content-share .icon {
+    font-size: 20px;
+    color: white;
+    background: rgb(158, 158, 158);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+}
+
+.content-share .icon:hover {
+    background-color: #555;
+}
+
+.content-share .icon_facebook::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: "\f39e";
+}
+
+.content-share .icon_twitter::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: "\f099";
+}
+
+.content-share .icon_whatsapp::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: "\f232";
+}
+
+.content-share .icon_mail::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f0e0";
+}
+
+
+.content {
+    width: 82%;
+    display: inline-block;
+}
+
+.content_text {
+    border-bottom: 1px dotted #DDD;
+}
+
+.content_text p {
+    margin: 24px 0px;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.content_text a:hover {
+    color: #E12248;
+    text-decoration: underline;
+}
+
+.author {
+    padding: 10px 0px;
+    display: flex;
+}
+
+.author_picture {
+    width: 66px;
+    height: 66px;
+    margin: 0 15px 0 10px;
+}
+
+.author_picture img {
+    border-radius: 50px;
+    border: #E12248 solid 0.5px;
+    width: 100%;
+}
+
+.author_info {
+    font-family: "Merriweather";
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.author_info a {
+    font-weight: bold;
+}
+
+.author_info a:hover {
+    text-decoration: underline;
+}
+
+.author_job {
+    color: #777;
+    font-size: 12px;
+}
+
+.author_contact {
+    display: flex;
+    margin-top: 5px;
+}
+
+.author_contact .icon {
+    color: gray;
+    font-size: 16px;
+    margin-right: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.author_contact .icon_mail:before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f0e0";
+}
+
+.author_contact .icon_twitter:before {
+    font-family: 'Font Awesome 5 Brands';
+    content: "\f081";
+}
+
+.content_video {
+    position: relative;
+}
+
+.content_video video {
+    width: 100%;
+}
+
+.content_video .button {
+    width: 126px;
+    height: 42px;
+    position: absolute;
+    bottom: -35px;
+    font-size: 14px;
+    line-height: 23px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 23px;
+    border-radius: 57px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: up-and-down 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes up-and-down {
+    0% {
+        transform: translate(-50%, calc(-50% + 4px));
+    }
+
+    40% {
+        transform: translate(-50%, calc(-50% - 4px));
+
+    }
+
+    55% {
+        transform: translate(-50%, calc(-50% - 4px));
+
+    }
+
+    100% {
+        transform: translate(-50%, calc(-50% + 4px));
+
+    }
+}
+
+.wrapper-customBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.customBtn {
+    width: 240px;
+    height: 61px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    outline: none;
+    background: #E12248;
+    padding: 10px 24px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.customBtnDisabled {
+    cursor: auto;
+    background: #b84c61;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+}
+
+.customBtn img {
+    display: inline-block;
+}
+
+.customBtn span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.customBtn:hover {
+    transition: all 0.2s linear;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.submit-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: -0.125em;
+    border: 0.2em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: .75s linear infinite spinner-border;
+}
+
+@keyframes spinner-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .topic {
+        font-size: 12px;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .header_title {
+        font-size: 30.1px;
+    }
+
+    .header_info {
+        font-size: 17px;
+    }
+
+    .content-share {
+        width: 100%;
+        margin-top: 0px;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+        position: static;
+    }
+
+    .content-share_wrapper {
+        border-top: 0px;
+        padding-top: 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .content_text p {
+        font-size: 17px;
+    }
+
+    .author_info a {
+        font-size: 17px;
+    }
+
+    .author_job {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:240px) {
+    .customBtn {
+        width: 95%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 172px) {
+    .header_title {
+        font-size: 20px;
+    }
+}
